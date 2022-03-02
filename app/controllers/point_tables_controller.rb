@@ -4,6 +4,12 @@ class PointTablesController < ApplicationController
   # GET /point_tables or /point_tables.json
   def index
     @point_tables = PointTable.all
+    @mini_goal_difference_id = @point_tables.smallest_goal_diff_id
+  end
+
+  def table_highlight
+    @point_tables = PointTable.all
+    @mini_goal_difference_id = @point_tables.smallest_goal_diff_id
   end
 
   # GET /point_tables/1 or /point_tables/1.json
