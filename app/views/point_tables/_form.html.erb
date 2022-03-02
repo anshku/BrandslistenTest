@@ -1,0 +1,57 @@
+<%= form_with(model: point_table) do |form| %>
+  <% if point_table.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(point_table.errors.count, "error") %> prohibited this point_table from being saved:</h2>
+
+      <ul>
+        <% point_table.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :win, style: "display: block" %>
+    <%= form.number_field :win %>
+  </div>
+
+  <div>
+    <%= form.label :loss, style: "display: block" %>
+    <%= form.number_field :loss %>
+  </div>
+
+  <div>
+    <%= form.label :draw, style: "display: block" %>
+    <%= form.number_field :draw %>
+  </div>
+
+  <div>
+    <%= form.label :goals_for, style: "display: block" %>
+    <%= form.number_field :goals_for %>
+  </div>
+
+  <div>
+    <%= form.label :goals_against, style: "display: block" %>
+    <%= form.number_field :goals_against %>
+  </div>
+
+  <div>
+    <%= form.label :goals_diff, style: "display: block" %>
+    <%= form.number_field :goals_diff %>
+  </div>
+
+  <div>
+    <%= form.label :total_points, style: "display: block" %>
+    <%= form.number_field :total_points %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

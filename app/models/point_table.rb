@@ -1,0 +1,2 @@
+class PointTable < ApplicationRecord
+end

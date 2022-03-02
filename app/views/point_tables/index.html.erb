@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Point tables</h1>
+
+<div id="point_tables">
+  <% @point_tables.each do |point_table| %>
+    <%= render point_table %>
+    <p>
+      <%= link_to "Show this point table", point_table %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New point table", new_point_table_path %>
